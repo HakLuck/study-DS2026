@@ -30,7 +30,7 @@ class GuessNumberGame:
               guess = (current_low + current_high)//2
               self.attempts += 1
 
-              print(f"\nПопытка №{self.attempts}. Компьютер думает чтоэто {guess}")
+              print(f"\nПопытка №{self.attempts}. Компьютер думает что это {guess}")
               answer = (
                   input("Я угадал? (да/ меньше/ больше): ").strip().lower()
               )
