@@ -5,8 +5,8 @@ import seaborn as sns
 from sklearn.preprocessing import MinMaxScaler
 
 #загружаем файл ксв
-file_path=''
-df = pd.read_csv(url)
+file_path='/home/s/DataScince/Sosinovich_DS_2026/Sosinovich_hw_2/heart.csv'
+df = pd.read_csv(file_path)
 
 print("1.Информация о датасете.")
 df.info()
@@ -37,7 +37,7 @@ print("\n--Результат One-Hot Encoding(первые 5 строк)--")
 print(df[['sex_female', 'sex_male']].head())
 
 #средний уровень холестерина(chol) для больных и здоровых
-mean_chol = df.groupby('target'[chol].mean())
+mean_chol = df.groupby('target')['chol'].mean()
 print("\n--Средний уровень холестерина(chol)--")
 print(f"Здоровые пациенты(target 0): {mean_chol[0]:.2f}")
 print(f"Больные пациенты(target 1): {mean_chol[1]:.2f}")
