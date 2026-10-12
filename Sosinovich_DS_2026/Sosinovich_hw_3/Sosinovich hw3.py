@@ -25,7 +25,7 @@ from sklearn.metrics import (
 
 #1.Загругружаем данные и делаем выборку
 
-df = pd.read_csv('/home/s/DataScince/Sosinovich_DS_2026/Sosinovich_hw_2/heart.csv')
+df = pd.read_csv('/home/s/DataScince/Sosinovich_DS_2026/Sosinovich_hw_3/heart.csv')
 
 #проверка на пропуски
 print("Пропущенные значения до очистки:")
