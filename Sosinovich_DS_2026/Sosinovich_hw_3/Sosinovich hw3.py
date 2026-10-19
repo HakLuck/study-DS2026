@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -24,8 +25,10 @@ from sklearn.metrics import (
 
 
 #1.Загругружаем данные и делаем выборку
+current_dir = os.path.dirname(os.path.abspath(__file__))
+path_to_file = os.path.join(current_dir, 'heart.csv')
 
-df = pd.read_csv('/home/s/DataScince/Sosinovich_DS_2026/Sosinovich_hw_3/heart.csv')
+df = pd.read_csv(path_to_file)
 
 #проверка на пропуски
 print("Пропущенные значения до очистки:")
